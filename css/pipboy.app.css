@@ -1,0 +1,287 @@
+
+@font-face {
+    font-family: Pipboy;
+    src: url('../monofonto.ttf');
+}
+
+
+body {
+    color: #14fe17;
+    background: #272b23;
+    font-family: Pipboy, sans-serif;
+}
+
+body::after {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .4) 1px, transparent 1px, transparent 2px);
+    opacity: .3;
+    z-index: 1000000;
+    pointer-events: none;
+}
+
+.navbar-light .navbar-nav > li.nav-item.active > .nav-link, .navbar-light .navbar-nav > li.nav-item > .nav-link {
+    text-align: center;
+    margin: auto;
+    font-size: 32px;
+    line-height: 22px;
+    padding-bottom: 0px;
+    z-index: 50;
+    position: relative;
+    background: #272b23;
+}
+
+.first-nav > div > ul {
+    margin: 0 200px;
+}
+
+.sub-menu {
+    margin: 20px;
+    border-bottom: none;
+    font-size: 26px;
+}
+
+.sub-menu > li:nth-child(2) > a {
+    opacity: .5;
+}
+
+.sub-menu > li:nth-child(3) > a {
+    opacity: .3;
+}
+
+.sub-menu > .nav-item > .nav-link:hover, .sub-menu > .nav-item > .nav-link {
+    border: 1px solid transparent;
+}
+
+.nav-item.active::before {
+    content: "";
+    position: absolute;
+    background: #272b23;
+    width: 100%;
+    height: 22px;
+    top: 18px;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    left: 0px;
+}
+
+.first-nav {
+    border-bottom: 2px solid;
+    margin: 0px 10px;
+    background: #272b23;
+}
+
+ul > li.nav-item > a.nav-link, ul > li.navbar-item.active > a.nav-link {
+    color: #14fe17 !important;
+
+}
+
+.navbar-light ul.navbar-nav > li {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.first-nav::before, .first-nav::after {
+    height: 7px;
+    width: 2px;
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 5000;
+    background: #14fe17;
+    bottom: -7px;
+}
+
+.first-nav::before {
+    left: 0px;
+}
+
+.first-nav::after {
+    right: 0px;
+}
+
+.nav-tabs .nav-link.active {
+    background: #272b23;
+    color: #14fe17;
+}
+
+.nav > a, .nav > li > a {
+    color: #14fe17;
+}
+
+.stat-bar {
+    width: 60px;
+    margin: auto;
+}
+
+.center-image {
+    position: absolute;
+    margin-left: 90px;
+}
+
+.stat-bars > .row {
+    margin-bottom: 100px;
+}
+
+.center-image img {
+    margin-left: auto;
+    display: block;
+    position: relative;
+    max-height: 300px;
+    margin-top: 90px;
+    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2);
+}
+
+.pip-footer {
+    position: fixed;
+    width: 1400px;
+    margin: 20px auto;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    font-size: 22px;
+}
+
+.pip-footer > .row > .col, .pip-footer > .row > .col-6 {
+    background: rgba(16, 255, 0, .15);
+}
+
+.pip-footer > .row {
+    padding: 5px;
+}
+
+.pip-footer .col-6 {
+    margin: 0px 10px;
+    flex: 0 0 48%;
+}
+
+.first-nav > div > ul > li.active {
+    padding: 0 20px;
+}
+
+.level-progress {
+    display: inline-block;
+    width: 70%;
+    border: 2px solid;
+    height: 10px;
+}
+
+.level-progress-indicator {
+    background: #14fe17;
+    height: 6px;
+    width: 70%;
+}
+
+#status {
+    max-width: 400px;
+    margin:  auto;
+}
+
+.w3 {
+    width: 30%;
+}
+
+.w5 {
+    width: 50%;
+}
+
+.w7 {
+    width: 70%;
+}
+
+.stat-numbers {
+    margin-top: -50px;
+}
+
+.stat-numbers > .col-1, .stat-numbers > .col-2 {
+    background: rgba(16, 255, 0, .15);
+    margin-right: 4px;
+}
+
+.stat-numbers .col-1.transparent, .stat-numbers .col-2.transparent {
+    background: transparent;
+}
+
+.stat-numbers img {
+    width: 100%;
+    filter: grayscale(1) brightness(200) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+}
+
+.stat-numbers img.sm-image {
+    width: 25px;
+    margin-left:-10px;
+}
+
+#weapons {
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 180px);
+}
+
+.item-list {
+    list-style: none;
+    margin: 0px;
+    float: left;
+    padding: 0px;
+}
+
+.item-list > li > a {
+    display: block;
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color:#14fe17;
+    padding-left: 25px;
+    text-decoration: none;
+}
+
+.item-list li a:hover {
+    text-decoration: none;
+    background: #14fe17;
+    color: #272b23;
+}
+
+.item-list a.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 20px;
+    margin-top: 7px;
+    background: #14fe17;
+}
+
+.item-list a.active:hover::before {
+    background: #272b23;
+}
+
+.item-stats {
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+    width: 200px;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.item-stats .row .col-12 {
+    background: rgba(16, 255, 0, .15);
+    margin-bottom: 2px;
+}
